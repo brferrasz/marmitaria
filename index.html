@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Pedidos de Marmitas Fit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🥗 Gerenciador de Pedidos de Marmitas Fit</h1>
+
+    <form id="form-pedido">
+        <label>Nome do Cliente:</label>
+        <input type="text" id="nome" required>
+
+        <label>Tipo de Marmita:</label>
+        <select id="tipo">
+            <option value="Low Carb">Low Carb</option>
+            <option value="Vegetariana">Vegetariana</option>
+            <option value="Tradicional">Tradicional</option>
+        </select>
+
+        <label>Quantidade de Marmitas:</label>
+        <input type="number" id="quantidade" min="1" required>
+
+        <label>Restrições Alimentares:</label><br>
+        <input type="checkbox" id="sem-gluten" value="Sem glúten">
+        <label for="sem-gluten">Sem glúten</label><br>
+
+        <input type="checkbox" id="sem-lactose" value="Sem lactose">
+        <label for="sem-lactose">Sem lactose</label><br><br>
+
+        <button type="submit" id="btn-registrar">Registrar Pedido</button>
+    </form>
+
+    <h2>📋 Pedidos Registrados</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Tipo</th>
+                <th>Qtde</th>
+                <th>Restrições</th>
+                <th>Valor Total</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-pedidos">
+            <!-- Os pedidos vão aparecer aqui -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
